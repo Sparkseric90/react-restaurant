@@ -25,7 +25,7 @@ export default class App extends Component {
   }
 
 
-  componentDidMount() {
+  async componentDidMount() {
     if (!localStorage.getItem('Appetizers')) {
       axios.get(`http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/menu/type/4`)
         .then(res => {
@@ -81,7 +81,7 @@ export default class App extends Component {
     }
 
     if (!localStorage.getItem('Drinks')) {
-      axios.get(`http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/menu/type/8`)
+      axios.get('http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/menu/type/8')
         .then(res => {
           this.setState({ Drinks: res.data });
         })
@@ -99,6 +99,13 @@ export default class App extends Component {
   }
 
   render() {
+
+    let myItems = [];
+
+    if(this.state.Drinks != null){
+      myItems = this.state.Drinks;
+    }
+    
     return (
       <div className="container-full text-center">
 
@@ -180,7 +187,7 @@ export default class App extends Component {
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body small">
-            {this.state.Drinks.map(drink => {
+            {myItems.map(drink => {
               return (<li>
                 <h1>{drink.name.split(" with ")[0]}</h1>
                 <p>{drink.description}</p>
