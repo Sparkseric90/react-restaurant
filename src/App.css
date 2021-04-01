@@ -1,12 +1,23 @@
-div.container {
-  background-color:#282c34;
+html, body {
+  background-color:slategray;
 }
 
-.App {
-  text-align: center;
-  background-color: #282c34;
-  
+.container-fluid {
+  padding: 1%;
+  background-color:rgb(112, 128, 144);
+  background-size: 100vw;
+
 }
+
+.btn {
+  margin: 2px;
+  padding: 2px;
+}
+
+.card-body2 {
+  background-color:rgb(112, 128, 144);
+}
+
 
 .App-logo {
   height: 40vmin;
@@ -20,7 +31,6 @@ div.container {
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

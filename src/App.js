@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-
+import './App.css';
+import Logo from "./logo.png"
 
 
 
@@ -15,6 +16,8 @@ export default class App extends Component {
       Special: []
     }
   }
+
+  
 
   componentDidUpdate() {
     localStorage.setItem('Appetizers', JSON.stringify(this.state.Appetizers))
@@ -107,9 +110,11 @@ export default class App extends Component {
     }
     
     return (
-      <div className="container-full text-center">
+      <div className="container-fluid text-center">
 
-        <div className="row">
+
+
+<div className="row">
           <div className="col-12 mx-auto">
           </div>
         </div>
@@ -119,9 +124,8 @@ export default class App extends Component {
             </div>
             <div className="col">
               <div class="card">
-                <div className="card-body">
-                  <h5 className="card-title">Test</h5>
-                  <p className="card-text">Test</p>
+                <div className="card-body2">
+                <img className="card-img-top" src={Logo} />
                 </div>
               </div>
             </div>
@@ -131,7 +135,8 @@ export default class App extends Component {
         </div>
 
 
-        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#app" aria-controls="offcanvasExample">Apps</button>
+
+        <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" data-bs-target="#app" aria-controls="offcanvasExample">Apps</button>
 
         <div class="offcanvas offcanvas-start" tabindex="-1" id="app" aria-labelledby="offcanvasExampleLabel">
           <div class="offcanvas-header">
@@ -155,7 +160,7 @@ export default class App extends Component {
         </div>
 
 
-        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#lunch" aria-controls="offcanvasExample">Lunch</button>
+        <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" data-bs-target="#lunch" aria-controls="offcanvasExample">Lunch</button>
 
         <div class="offcanvas offcanvas-start" tabindex="-1" id="lunch" aria-labelledby="offcanvasExampleLabel">
           <div class="offcanvas-header">
@@ -180,7 +185,7 @@ export default class App extends Component {
 
 
 
-        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Drinks</button>
+        <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Drinks</button>
         <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasBottomLabel">Drinks</h5>
@@ -201,7 +206,7 @@ export default class App extends Component {
 
 
 
-        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#dinner" aria-controls="offcanvasRight">Dinner</button>
+        <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" data-bs-target="#dinner" aria-controls="offcanvasRight">Dinner</button>
 
         <div class="offcanvas offcanvas-end" tabindex="-1" id="dinner" aria-labelledby="offcanvasRightLabel">
           <div class="offcanvas-header">
@@ -227,7 +232,7 @@ export default class App extends Component {
 
 
 
-        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#dessert" aria-controls="offcanvasRight">Dessert</button>
+        <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" data-bs-target="#dessert" aria-controls="offcanvasRight">Dessert</button>
 
         <div class="offcanvas offcanvas-end" tabindex="-1" id="dessert" aria-labelledby="offcanvasRightLabel">
           <div class="offcanvas-header">
@@ -262,6 +267,7 @@ export default class App extends Component {
           <p>348 E Main St</p>
           <p>Lexington, Ky</p>
         </div>
+
       </div>
 
     )
