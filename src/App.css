@@ -5,8 +5,11 @@ html, body {
 .container-fluid {
   padding: 1%;
   background-color:rgb(112, 128, 144);
-  background-size: 100vw;
+}
 
+.card2 {
+  width: 18rem;
+  position: relative;
 }
 
 .btn {
