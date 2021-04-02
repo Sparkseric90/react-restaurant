@@ -1,7 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import './App.css';
 import App from './App';
+import Sandbox from './Sandbox';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
